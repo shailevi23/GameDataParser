@@ -1,5 +1,8 @@
 using CoockieCookbook.UI.ConsoleUI;
 using GameDataParser.App;
+using GameDataParser.Repository;
+using GameDataParser.Utils;
+using System;
 
 namespace GameDataParser
 {
@@ -7,8 +10,22 @@ namespace GameDataParser
     {
         static void Main(string[] args)
         {
-            GameDataParserApp gameDataParser = new GameDataParserApp(new ConsoleUI());
-            gameDataParser.Run();
+            var ui = new ConsoleUI();
+
+            GameDataParserApp gameDataParser = new GameDataParserApp(
+                new GameDataRepository(),
+                ui,
+                new ValidateInput());
+
+            try
+            {
+                gameDataParser.Run();
+            }
+            catch (Exception ex)
+            {
+                ui.ShowMessage("Sorry! The application has experienced an unexpected error and will have to be closed.");
+                ui.CloseApp();
+            }
         }
     }
 }

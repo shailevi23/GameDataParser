@@ -19,5 +19,13 @@ namespace CoockieCookbook.UI.ConsoleUI
         {
             return Console.ReadLine();
         }
+
+        public void ShowMessageWithColor(string message, ConsoleColor changeColor)
+        {
+            var originalColor = Console.ForegroundColor;
+            Console.ForegroundColor = changeColor;
+            Console.WriteLine(message);
+            Console.ForegroundColor = originalColor;
+        }
     }
 }
