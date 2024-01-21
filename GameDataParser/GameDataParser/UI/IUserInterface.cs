@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 
-namespace CoockieCookbook.UI
+namespace GameDataParser.UI
 {
     interface IUserInterface
     {

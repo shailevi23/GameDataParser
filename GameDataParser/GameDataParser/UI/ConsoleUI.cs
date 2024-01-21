@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CoockieCookbook.UI.ConsoleUI
+namespace GameDataParser.UI.ConsoleUI
 {
     class ConsoleUI : IUserInterface
     {

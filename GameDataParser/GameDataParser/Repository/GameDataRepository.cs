@@ -1,6 +1,5 @@
-﻿using GameDataParser.Exceptions;
-using GameDataParser.Main_Classes;
-using System;
+﻿using GameDataParser.Entity_Classes;
+using GameDataParser.Exceptions;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
@@ -14,7 +13,7 @@ namespace GameDataParser.Repository
             return File.Exists(filePath);
         }
 
-        public List<Game> ReadDataAsJson(string filePath)
+        public List<Game> ReadData(string filePath)
         {
             string text = "";
 

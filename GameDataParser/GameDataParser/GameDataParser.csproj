@@ -68,10 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App\GameDataParserApp.cs" />
+    <Compile Include="Entity Classes\LogExceptioncs.cs" />
     <Compile Include="Exceptions\JsonParseException.cs" />
-    <Compile Include="Main Classes\Game.cs" />
+    <Compile Include="Entity Classes\Game.cs" />
+    <Compile Include="Files\IFileHandler.cs" />
     <Compile Include="Repository\GameDataRepository.cs" />
     <Compile Include="Repository\IGameDataRepository.cs" />
+    <Compile Include="Files\TextFileHandler.cs" />
     <Compile Include="UI\ConsoleUI.cs" />
     <Compile Include="UI\IUserInterface.cs" />
     <Compile Include="Program.cs" />
